@@ -1,7 +1,7 @@
 import Menu from "@/components/common/menu/menu";
-import CartSummary from "@/components/state-management/context-api/cart-summary/cartSummary";
+import CartSummaryPage from "@/components/state-management/context-api/cart-summary/cartSummaryPage";
 import { ContextApiExampleConstants } from "@/constants/stateManagementConstants";
-import { contextApiMenu } from "@/types/static/menu";
+import { contextApiMenu } from "@/types/static/menuDatas";
 import { notFound } from "next/navigation";
 
 const ContextApiPage = async (props: {
@@ -18,7 +18,7 @@ const ContextApiPage = async (props: {
 
     switch (example) {
         case ContextApiExampleConstants.CART_SUMMARY:
-            return <CartSummary />
+            return <CartSummaryPage />
     
         default:
             return notFound()

@@ -4,7 +4,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { MenuItemModel } from "@/types/common/menu";
+import { MenuItemModel } from "@/types/common/menuModels";
 import Image from "next/image";
 
 const MenuItem = ({ data }: { data: MenuItemModel }) => {

@@ -1,4 +1,4 @@
-import { MenuItemModel, MenuModel } from "@/types/common/menu";
+import { MenuItemModel, MenuModel } from "@/types/common/menuModels";
 import MenuItem from "./menuItem";
 import Link from "next/link";
 

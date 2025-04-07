@@ -1,4 +1,4 @@
-import { MenuModel, MenuItemModel } from "@/types/common/menu";
+import { MenuModel, MenuItemModel } from "@/types/common/menuModels";
 import { ShoppingCart } from 'lucide-react';
 
 // Homepage

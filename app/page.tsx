@@ -1,10 +1,12 @@
 import Menu from "@/components/common/menu/menu";
 import { homePageMenu } from "@/types/static/menuDatas";
 
-export default function Home() {
+const HomePage = () => {
   return (
     <>
       <Menu data={homePageMenu} />
     </>
   );
-}
+};
+
+export default HomePage;

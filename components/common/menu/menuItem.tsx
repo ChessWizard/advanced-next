@@ -12,11 +12,15 @@ const MenuItem = ({ data }: { data: MenuItemModel }) => {
     <>
       <HoverCard>
         <HoverCardTrigger asChild>
-          <Card className="group relative w-full overflow-hidden p-0">
+          <Card className="group relative overflow-hidden p-0
+                   w-[180px] h-[180px]
+                   md:w-[260px] md:h-[260px] 
+                   lg:w-[240px] lg:h-[240px]
+          ">
             <CardContent
-              className="w-[150px] h-[150px] p-0
-                   md:w-[180px] md:h-[180px] 
-                   lg:w-[200px] lg:h-[200px]"
+              className="w-[180px] h-[180px] p-0
+                   md:w-[260px] md:h-[260px] 
+                   lg:w-[240px] lg:h-[240px]"
             >
               {typeof data.image === "string" ? (
                 <Image
@@ -24,9 +28,9 @@ const MenuItem = ({ data }: { data: MenuItemModel }) => {
                   width={200}
                   height={200}
                   alt="menu item"
-                  className="w-[150px] h-[150px] 
-                   md:w-[180px] md:h-[180px] 
-                   lg:w-[200px] lg:h-[200px] object-contain transition-all duration-500"
+                  className="w-[180px] h-[180px] 
+                   md:w-[260px] md:h-[260px] 
+                   lg:w-[240px] lg:h-[240px] object-contain transition-all duration-500"
                 />
               ) : (
                 data.image

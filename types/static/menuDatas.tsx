@@ -1,5 +1,5 @@
 import { MenuModel, MenuItemModel } from "@/types/common/menuModels";
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Diff } from 'lucide-react';
 
 // Homepage
 const homePageMenuItems: MenuItemModel[] = [
@@ -30,6 +30,12 @@ const stateManagementItems: MenuItemModel[] = [
         image: "/images/menu/context-api.png",
         link: "/state-management/context-api"
     },
+    {
+        title: "useState() Hook",
+        description: "useState() Hook in React shares state locally within a component for basic state management.",
+        image: "/images/menu/use-state.png",
+        link: "/state-management/use-state"
+    },
 ]
 
 export const stateManagementMenu: MenuModel = {
@@ -42,9 +48,10 @@ const contextApiItems: MenuItemModel[] = [
     {
         title: "Cart Summary",
         description: "Cart summary built using Context API for global state sharing.",
-        image: <ShoppingCart className="w-[150px] h-[150px] object-contain transition-all duration-500 p-10 
-        md:w-[180px] md:h-[180px]
-        lg:w-[200px] lg:h-[200px]" />,
+        image: <ShoppingCart className="object-contain transition-all duration-500 p-10 
+                   w-[180px] h-[180px]
+                   md:w-[260px] md:h-[260px] 
+                   lg:w-[240px] lg:h-[240px]" />,
         link: "/state-management/context-api?example=cart-summary"
     },
 ]
@@ -52,6 +59,24 @@ const contextApiItems: MenuItemModel[] = [
 export const contextApiMenu: MenuModel = {
     title: "Context API",
     items: contextApiItems
+}
+
+// State Management -> useState() Hook
+const useStateItems: MenuItemModel[] = [
+    {
+        title: "Counter Game",
+        description: "Counter game built using useState() hook.",
+        image: <Diff className="object-contain transition-all duration-500 p-10 
+                   w-[180px] h-[180px]
+                   md:w-[260px] md:h-[260px] 
+                   lg:w-[240px] lg:h-[240px]" />,
+        link: "/state-management/use-state?example=counter-game"
+    },
+]
+
+export const useStateMenu: MenuModel = {
+    title: "useState() Hook",
+    items: useStateItems
 }
 
 

@@ -66,6 +66,14 @@ const CounterGamePage = () => {
     );
   }, []);
 
+  const incrementGamePoint = useCallback(() => {
+    setGamePoint((prev) => prev + 1);
+  }, []);
+
+  const decrementGamePoint = useCallback(() => {
+    setGamePoint((prev) => Math.max(MIN_GAME_POINT, prev - 1));
+  }, []);
+
   const startGame = useCallback(() => {
     setInitialGameModalIsOpen(false);
     setGameStage(GameStage.PENDING_PLAYING);
@@ -194,14 +202,32 @@ const CounterGamePage = () => {
               <label htmlFor="gamePoint" className="text-xs">
                 Game Point
               </label>
-              <input
-                id="gamePoint"
-                className="w-full border px-3 py-2 rounded mb-4"
-                type="number"
-                min={MIN_GAME_POINT}
-                value={gamePoint}
-                onChange={(e) => handleGamePointChange(e.target.value)}
-              />
+              <div className="flex items-center gap-2 mb-4">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="h-10 w-10"
+                  onClick={decrementGamePoint}
+                >
+                  -
+                </Button>
+                <input
+                  id="gamePoint"
+                  className="w-full border px-3 py-2 rounded text-center text-lg font-semibold"
+                  type="number"
+                  min={MIN_GAME_POINT}
+                  value={gamePoint}
+                  onChange={(e) => handleGamePointChange(e.target.value)}
+                />
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="h-10 w-10"
+                  onClick={incrementGamePoint}
+                >
+                  +
+                </Button>
+              </div>
               <Button
                 className="cursor-pointer"
                 onClick={startGame}
